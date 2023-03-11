@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.map.College" table="COLLEGE">
+		<id name="clgId" column="CLG_ID" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="clgName" column="CLG_NAME" type="string" />
+		<map name="hods" table="HOD_DEPT">
+			<key column="CLG_ID" />
+			<index column="HOD_NAME" type="string"/>
+			<element column="HOD_DEPT" type="string"/>
+		</map>
+	</class>
+
+</hibernate-mapping>
