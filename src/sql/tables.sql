@@ -60,3 +60,38 @@ select * from COLLEGE;
 select * from HOD_DEPT;
 
 -- Map Table script ends
+
+
+-- List and Set Table script starts
+drop table PHONE_NUMBERS;
+drop table APPS;
+drop table PHONE1;
+
+create table PHONE1(
+PHN_ID int PRIMARY KEY,
+PHN_NAME varchar(30)
+);
+
+
+create table APPS(
+PHN_ID int, 
+APPS varchar(30),
+INDEX_TYPE int,
+KEY (PHN_ID),
+CONSTRAINT FOREIGN KEY(PHN_ID) REFERENCES PHONE1(PHN_ID)
+);
+
+create table PHONE_NUMBERS(
+PHN_ID int, 
+NUMBERS varchar(30),
+KEY (PHN_ID),
+CONSTRAINT FOREIGN KEY(PHN_ID) REFERENCES PHONE1(PHN_ID)
+);
+
+select * from PHONE_NUMBERS;
+select * from APPS;
+select * from PHONE1;
+
+
+ 
+-- List and Set Table script ends

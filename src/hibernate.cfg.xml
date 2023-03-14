@@ -10,5 +10,6 @@
 		<mapping resource="list-mapping.xml"/>
 		<mapping resource="set-mapping.xml"/>
 		<mapping resource="map-mapping.xml"/>
+		<mapping resource="list-set-mapping.xml"/>
 	</session-factory>
 </hibernate-configuration>
